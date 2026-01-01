@@ -4,6 +4,14 @@ import dbConnection from './Config/dbConfig.js'
 import router from './Routes/userRoutes.js'
 import todoRouter from './Routes/todoRoutes.js'
 
+
+app.use(cors({
+  origin: 'http://localhost:5173',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}))
+
 dotenv.config()
 
 const app = express()
