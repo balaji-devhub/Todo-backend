@@ -4,7 +4,17 @@ import dbConnection from './Config/dbConfig.js'
 import router from './Routes/userRoutes.js'
 import todoRouter from './Routes/todoRoutes.js'
 
+const app = express()
 // newly add CORS orgin platform communication
+
+
+dotenv.config()
+
+
+const PORT = process.env.PORT || 5000
+
+app.use(express.json())
+dbConnection()
 
 app.use(
   cors({
@@ -15,13 +25,6 @@ app.use(
   })
 )
 
-dotenv.config()
-
-const app = express()
-const PORT = process.env.PORT || 5000
-
-app.use(express.json())
-dbConnection()
 
 app.use('/user', router)
 app.use('/', todoRouter)
