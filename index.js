@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 import dbConnection from './Config/dbConfig.js'
 import router from './Routes/userRoutes.js'
 import todoRouter from './Routes/todoRoutes.js'
+import cors from 'cors'
 
 const app = express()
 // newly add CORS orgin platform communication
