@@ -16,7 +16,7 @@ app.use(express.json())
 
 app.use(
   cors({
-    origin: ['http://localhost:5173', 'https://your-frontend-domain.onrender.com'],
+    origin: ['http://localhost:5173', 'https://todo-frontend-production-8b8b.up.railway.app'],
     credentials: true
   })
 )
